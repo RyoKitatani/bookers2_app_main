@@ -1,0 +1,7 @@
+<div id="error_explanation">
+                <% if @book_comment.errors.any? %>
+                  <% @book_comment.errors.full_messages.each do |message| %>
+                 <h2><%= message %></h2>
+                  <% end %>
+               <% end %>
+            </div>

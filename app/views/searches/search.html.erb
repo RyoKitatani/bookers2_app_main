@@ -1,0 +1,9 @@
+<% if @model == 'user' %>
+  <h3>Users search for：<%= @content %></h3>
+  <div id="comments_area">
+  <%= render 'users/index', users: @records %>
+  </div>
+<% else @model == 'books' %>
+ <h3>Books search for：<%= @content %></h3>
+ <%= render 'books/index', books: @records %>
+<% end %>
