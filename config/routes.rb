@@ -8,6 +8,10 @@ Rails.application.routes.draw do
         resources :book_comments, only: [:create, :destroy]
         resource :favorites, only: [:create, :destroy]
     end
+    
+    resources :messages, only: [:create, :destroy]
+    resources :rooms, only: [:create, :index, :show]
+    
 
     get "/search" => "searches#search"
     
