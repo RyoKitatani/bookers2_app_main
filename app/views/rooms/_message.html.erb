@@ -2,7 +2,6 @@
   <div class="col-md-12">
     <div class="col-md-6 mx-auto">
       <div class="page-header">
-       <h3><%= link_to another_entry.user.name, user_path(another_entry.user) %></h3>
         <table class="table table-hover">
           <thead>
             <tr class="table-primary">
@@ -22,7 +21,7 @@
               <td><%= message.body %></td>
               <td>
                 <% if message.user == current_user %>
-                <%= link_to '削除', message, method: :delete, data: { confirm: '本当に削除してもよろしいですか？' }, class: 'btn-sm btn-danger' %>
+                <%= link_to '削除', message, method: :delete, remote: true, data: { confirm: '本当に削除してもよろしいですか？' }, class: 'btn-sm btn-danger' %>
                 <% end %>
               </td>
             </tr>
@@ -34,18 +33,3 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-12">
-    <div class="col-md-4 mx-auto">
-     <%= form_with model: message, url: messages_path, local: true do |f| %>
-       <div class="col-xs-10">
-       <%= f.text_field :body, class: 'form-control' %>
-       <%= f.hidden_field :room_id, value: room.id %>
-       </div>
-       <div class="col-xs-2">
-        <%= f.submit '送信', class: 'btn btn-info btn-block' %>
-        <% end %>
-       </div>
-    </div>
-  </div>
-</div>
