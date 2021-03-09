@@ -58,3 +58,4 @@ gem 'font-awesome-sass', '~> 5.13'
 gem 'byebug'
 gem 'jp_prefecture'
 gem 'pry-rails'
+gem 'whenever', require: false
