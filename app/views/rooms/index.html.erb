@@ -17,6 +17,7 @@
             <td>
             <%= link_to room_path(entry.room) do %>
              <%= Message.find_by(id: entry.room.message_ids.last)&.body %>
+             <% end %>
             </td>
           </tr>
           <% end %>

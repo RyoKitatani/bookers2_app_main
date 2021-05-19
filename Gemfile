@@ -59,3 +59,4 @@ gem 'byebug'
 gem 'jp_prefecture'
 gem 'pry-rails'
 gem 'whenever', require: false
+gem 'rails-i18n'

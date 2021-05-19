@@ -1,13 +1,6 @@
 <div class="container px-5 px-sm-0">
     <div id="error_explanation">
-        <% if @book.errors.any? %>
-            <h2><%= @book.errors.count %> error prohibited this obj from being saved:</h2>
-            <ul>
-                <% @book.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-                <% end %>
-            </ul>
-        <% end %>
+        <%= render "devise/shared/error_messages", resource: @book %>
     </div>
     <div class="row">
         <div class="col-md-3">
